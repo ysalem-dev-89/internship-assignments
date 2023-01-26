@@ -1,4 +1,3 @@
-// import bcrypt from 'bcrypt';
 import mongoose, { Schema } from 'mongoose';
 
 import {
@@ -35,16 +34,6 @@ const userSchema: Schema = new mongoose.Schema<UserInterface>({
   businessInfo: { type: businessSchema, default: {} },
   professionalInfo: { type: professionalInfo, default: {} }
 });
-
-// userSchema.pre('save', async function (next) {
-//   if (!this.isModified('password')) next();
-
-//   const salt = await bcrypt.genSalt(10);
-//   const hash = await bcrypt.hash(this.password, salt);
-//   this.password = hash;
-
-//   return next();
-// });
 
 userSchema.set('toJSON', {
   transform: (document, returnedObject) => {

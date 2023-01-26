@@ -37,23 +37,25 @@ export default function CategorySelect() {
   };
 
   return (
-    <aside>
-      <Form>
-        {categories.map(category => (
-          <FormGroup key={category.id}>
-            <div className="d-flex gap-2">
-              <Input
-                type="checkbox"
-                id={category.id}
-                value={category.id}
-                checked={filter?.categories?.includes(category.id)}
-                onChange={handleFilterChange}
-              ></Input>
-              <Label htmlFor={category.id}>{category.name}</Label>
-            </div>
-          </FormGroup>
-        ))}
-      </Form>
-    </aside>
+    categories && (
+      <aside>
+        <Form>
+          {categories.map(category => (
+            <FormGroup key={category.id}>
+              <div className="d-flex gap-2">
+                <Input
+                  type="checkbox"
+                  id={category.id}
+                  value={category.id}
+                  checked={filter?.categories?.includes(category.id)}
+                  onChange={handleFilterChange}
+                ></Input>
+                <Label htmlFor={category.id}>{category.name}</Label>
+              </div>
+            </FormGroup>
+          ))}
+        </Form>
+      </aside>
+    )
   );
 }

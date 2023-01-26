@@ -39,17 +39,15 @@ const productsSlice = createSlice({
         state.loading = true;
       })
       .addCase(fetchProducts.fulfilled, (state, action) => {
-        state.products = action.payload.items as ProductInterface[];
-        state.totalCount = action.payload.totalCount;
-        state.totalPrice = (action.payload.items as ProductInterface[]).reduce(
-          (acc, p) => acc + p.price,
-          0
-        );
-        state.loading = false;
-        state.error = null;
-
-        // caching in session storage
-        sessionStorage.setItem('productsState', JSON.stringify(state));
+        if (action.payload?.items) {
+          state.products = action.payload.items as ProductInterface[];
+          state.totalCount = action.payload.totalCount;
+          state.totalPrice = (
+            action.payload.items as ProductInterface[]
+          ).reduce((acc, p) => acc + p.price, 0);
+          state.loading = false;
+          state.error = null;
+        }
       })
       .addCase(fetchProducts.rejected, (state, { payload }) => {
         state.error = `${payload}` || 'something went wrong';

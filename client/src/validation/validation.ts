@@ -18,7 +18,8 @@ const userSchema = (customerType: CustomerType) => {
       .required(),
     confirmPassword: yup
       .string()
-      .oneOf([yup.ref('password'), null], 'Passwords must match'),
+      .oneOf([yup.ref('password'), null], 'Passwords must match')
+      .required('Confirm your password'),
     firstName: yup.string().required('First Name is required'),
     lastName: yup.string().required('Last Name is required'),
     address: yup.string().required('Address is required'),

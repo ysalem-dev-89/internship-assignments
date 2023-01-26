@@ -11,9 +11,10 @@ const ProductList = () => {
   return (
     <Container>
       <Row md={3} sm={2} lg={4}>
-        {products?.map(product => (
-          <ProductItem key={product.id} product={product} />
-        ))}
+        {products &&
+          products?.map(product => (
+            <ProductItem key={product.id} product={product} />
+          ))}
       </Row>
     </Container>
   );
