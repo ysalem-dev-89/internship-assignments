@@ -1,0 +1,8 @@
+
+GET http://localhost:4000/api/v1/products
+###
+GET http://localhost:4000/api/v1/products?limit=20&sort=price:desc
+###
+GET http://localhost:4000/api/v1/products?limit=20&page=2&sort=price:desc
+###
+GET http://localhost:4000/api/v1/products?category=63ce813df3cdccd3e535991f&limit=20&page=2&sort=price:desc

@@ -1,0 +1,123 @@
+body {
+    min-height: 100%;
+    height: 100%;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.container {
+    max-width: 600px !important;
+}
+
+.row .col .form-control {
+    margin-bottom: 5px !important;
+    font-size: 14px;
+}
+
+label, .input-error {
+    font-size: 14px;
+}
+
+.col .mb-3 {
+margin-bottom: 10px !important;
+}
+
+fieldset {
+    border: none !important;
+    border-top: 1px solid #ccc !important;
+}
+legend {
+    all: initial !important;
+    font-family: inherit !important;
+    font-size: 20px !important;
+    transform: translateY(-3px) !important;
+}
+
+
+.form-control[aria-invalid='true'] {
+    border: 1px solid rgba(var(--bs-danger-rgb)) !important;
+}
+
+.navbar {
+    margin-top: 0 !important;
+}
+
+.products  .container {
+    max-width: 1170px !important;
+}
+.products > .container {
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+
+.products {
+    font-size: 14px !important;
+}
+
+.products .col-md-9{
+    position: relative;
+}
+
+
+.card {
+    min-height: 320px !important;
+}
+
+.badge {
+    font-size: 11px !important;
+    font-weight: lighter;
+    text-transform: capitalize;
+    margin-top: 5px;
+}
+
+.products .card-title {
+    font-size: 16px !important;
+}
+
+.card img {
+    height: 200px !important;
+}
+
+
+aside {
+    background-color: rgb(238, 228, 214);
+    font-weight: bold !important;
+    text-transform: capitalize;
+    padding: 20px;
+    max-height: 700px;
+    overflow-y: auto;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 768px){
+    aside {
+        max-height: 200px;
+    }
+}
+
+aside .mb-3 {
+    margin-bottom: 5px !important;
+}
+
+.products .loading{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}

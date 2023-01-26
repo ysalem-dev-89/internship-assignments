@@ -1,0 +1,22 @@
+
+GET http://localhost:4000/api/v1/users
+###
+POST http://localhost:4000/api/v1/users
+Content-Type: application/json
+
+{
+    "email": "test@dev",
+    "password": "test@#123ABC",
+    "firstName": "First",
+    "lastName": "Last",
+    "phone": "585858585",
+    "birthDate": "1-1-2000",
+    "gender": "male",
+    "address": "Gaza",
+    "customerType": "individual"
+}
+
+###
+GET http://localhost:4000/api/v1/products?limit=20&page=2&sort=price:desc
+###
+GET http://localhost:4000/api/v1/products?category=63ce813df3cdccd3e535991f&limit=20&page=2&sort=price:desc
