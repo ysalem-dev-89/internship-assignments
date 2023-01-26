@@ -6,8 +6,7 @@ module.exports = {
     es6: true,
     commonjs: true,
     es2021: true,
-    'jest/globals': true,
-    'cypress/globals': true
+    'jest/globals': true
   },
   extends: [
     'plugin:react/recommended',
@@ -18,7 +17,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest'
   },
-  plugins: ['react', 'jest', 'cypress', 'prettier'],
+  plugins: ['react', 'jest', 'prettier'],
   rules: {
     'prettier/prettier': 'error',
     '@typescript-eslint/no-unused-vars': [
