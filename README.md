@@ -1,5 +1,5 @@
 # Bayt Internship Assignments (1 & 2)
-## [Live Server](https://wms-team9-final.onrender.com)
+## [Live Server](https://internship-assignments.onrender.com)
 
 ---
 ## Description:
